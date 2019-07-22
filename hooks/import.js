@@ -37,15 +37,7 @@ exports.import = function (hook_nams, args, cb) {
          * a supported file, so, is not important
          * check again the other file format
          **/
-        if (fileExt === '.html' ||
-                fileExt === '.txt' ||
-                fileExt === '.etherpad') {
-
-            apiLogger.debug('File has a basic extension[txt, html]: ' +
-                        fileExt);
-            return cb([]);
-        }
-        apiLogger.debug('Use the tool to convert file');
+           apiLogger.debug('Use the tool to convert file');
 
         tool.convertFile(cmd, args.srcFile,
                 args.destFile,
